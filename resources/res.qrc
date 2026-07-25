@@ -1,0 +1,56 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/">
+    <file alias="style.qss">style.qss</file>
+  </qresource>
+  <qresource prefix="/i18n">
+    <file alias="qt_zh_CN.qm">i18n/qt_zh_CN.qm</file>
+    <!-- Qt5.15 官方包无 qtbase_zh_CN；QMessageBox 按钮走 QPlatformTheme，需此文件 -->
+    <file alias="qtbase_zh_CN.qm">i18n/qtbase_zh_CN.qm</file>
+  </qresource>
+  <qresource prefix="/icons">
+    <file alias="keypresser.ico">keypresser.ico</file>
+  </qresource>
+  <qresource prefix="/docs">
+    <file alias="changelog.md">../docs/更新日志.md</file>
+  </qresource>
+  <qresource prefix="/png">
+    <file alias="app_logo.png">png/app_logo.png</file>
+    <file alias="check.png">png/check.png</file>
+    <file alias="combo_down.png">png/combo_down.png</file>
+    <file alias="spin_up.png">png/spin_up.png</file>
+    <file alias="spin_down.png">png/spin_down.png</file>
+    <file alias="qqqun.png">png/qqqun.png</file>
+    <file alias="mouse.png">png/mouse.png</file>
+    <file alias="keyboard.png">png/keyboard.png</file>
+    <file alias="reset.png">png/reset.png</file>
+    <file alias="delete.png">png/delete.png</file>
+    <file alias="window_recorder.png">png/window_recorder.png</file>
+    <file alias="wr_record.png">png/wr_record.png</file>
+    <file alias="wr_play.png">png/wr_play.png</file>
+    <file alias="wr_stop.png">png/wr_stop.png</file>
+    <file alias="recording.png">png/recording.png</file>
+    <file alias="selPt.png">png/selPt.png</file>
+    <file alias="image.png">png/image.png</file>
+    <file alias="image_white.png">png/image_white.png</file>
+    <file alias="import.png">png/import.png</file>
+    <file alias="export.png">png/export.png</file>
+    <file alias="undo.png">png/undo.png</file>
+    <file alias="redo.png">png/redo.png</file>
+    <file alias="new.png">png/new.png</file>
+    <file alias="open.png">png/open.png</file>
+    <file alias="save.png">png/save.png</file>
+    <file alias="save_as.png">png/save_as.png</file>
+    <file alias="about.png">png/about.png</file>
+    <file alias="help.png">png/help.png</file>
+    <file alias="timing.png">png/timing.png</file>
+    <file alias="account.png">png/account.png</file>
+    <file alias="update.png">png/update.png</file>
+    <file alias="changelog.png">png/changelog.png</file>
+    <file alias="clear.png">png/clear.png</file>
+    <file alias="radio_off.png">png/radio_off.png</file>
+    <file alias="radio_off_hover.png">png/radio_off_hover.png</file>
+    <file alias="radio_on.png">png/radio_on.png</file>
+    <file alias="radio_on_hover.png">png/radio_on_hover.png</file>
+  </qresource>
+</RCC>

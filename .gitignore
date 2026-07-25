@@ -1,0 +1,43 @@
+# Build
+build/
+build-*/
+debug/
+release/
+dist/
+third_party/qwindowkit/
+third_party/qwindowkit-build/
+third_party/openssl/
+*.pro.user
+*.pro.user.*
+*.qmlc
+*.jsc
+Makefile*
+object_script.*
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+*.o
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.exp
+*.log
+
+# Qt Creator
+*.autosave
+CMakeLists.txt.user
+
+# Local deploy copies
+/bin/
+*.dll
+!engine/runtime/bin/*.dll
+
+# Packaged outputs
+dist/
+*.setup.exe
+*setup.exe
+KeyPresserNextCommunity-*-setup.exe
+
+.env
+credentials.json

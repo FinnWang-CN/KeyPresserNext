@@ -1,0 +1,13 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="KeyPresser Next">
+  <!-- light plate -->
+  <rect x="10" y="10" width="492" height="492" rx="100" ry="100" fill="#f2f2f2"/>
+  <!-- key border -->
+  <rect x="56" y="56" width="400" height="400" rx="92" ry="92" fill="#0a0a0a"/>
+  <!-- key face -->
+  <rect x="88" y="88" width="336" height="336" rx="72" ry="72" fill="#2a2a2a"/>
+  <!-- flat rounded right arrow — solid green -->
+  <g fill="none" stroke="#8cf055" stroke-width="78" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M145 256 H320"/>
+    <path d="M300 145 L410 256 L300 367"/>
+  </g>
+</svg>
