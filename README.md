@@ -27,6 +27,7 @@ Windows 桌面自动化工具：统一按键 / 鼠标 / 识图行编辑器。
 | 动作行拖动调序 | — | ✅ |
 | 32 位目标窗口绑定 / 输入 | — | ✅ |
 | DeepSeek Harness（DSH）联用 | — | ✅ |
+| MCP（Cursor / Codex / Trae 等 Agent） | — | ✅ |
 | 兼容 16 位色程序 | — | ✅ |
 | 一键安装包 | — | ✅ |
 | 自动更新（含 OCR 组件） | — | ✅ |
@@ -49,6 +50,18 @@ Agent 能代劳的事包括：
 改完后主窗口马上刷新。用法、怎么选模式、常见问题都可以直接问 DSH（会参考本软件的用户帮助）。
 
 程序内菜单 **帮助 → 安装 DSH 插件并重启** 即可装好。Community 不含控制通道与插件，无法与 DSH 联用。
+
+### 官网版：MCP（Cursor / Codex / Trae 等）
+
+官网 **1.2.1** 起，同一套控制能力也可通过 **MCP** 交给 Cursor、Claude Code、Codex、Trae、CodeBuddy 等 Agent。工具名均为 `keypressernext`，能做的事与 DSH 对齐：绑窗、改动作行、开始 / 停止、录制、测试截图与键鼠、打开 / 保存 `.kpn` 等。
+
+接入方式：
+
+1. 本机已安装 Node，且 Agent 与本程序使用**同一 Windows 用户**
+2. 菜单 **帮助 → 复制 MCP 配置…**，粘贴给 Agent 自动写入配置，或按用户帮助手动合并 `mcp.json`
+3. 刷新 MCP 后即可调用 `keypressernext`
+
+Community 不含本机控制通道与 MCP 服务，无法通过 MCP 联用。
 
 ## 构建
 
