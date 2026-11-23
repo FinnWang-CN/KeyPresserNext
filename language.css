@@ -1,0 +1,25 @@
+.language-switch {
+    flex: none;
+    margin-inline-start: auto;
+    padding: 5px 10px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    color: var(--accent-bright, #a78bfa);
+    font-size: 0.82rem;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.language-switch:hover,
+.language-switch:focus-visible {
+    color: inherit;
+}
+
+@media (max-width: 1050px) {
+    html[lang="en"] .nav-inner { gap: 12px; }
+    html[lang="en"] .nav-links { gap: 12px; }
+}
+
+@media (max-width: 900px) {
+    html[lang="en"] .nav-links a[href^="#"] { display: none; }
+}
