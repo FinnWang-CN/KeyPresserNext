@@ -6,7 +6,7 @@ KeyPresserNext Community is a Windows desktop app for recording keyboard and mou
 
 ![KeyPresserNext Community action editor](docs/images/ui-main.png)
 
-This repository contains the Community source. The **Official edition 1.2.5** installer in Releases is the separately distributed product. [Official website](https://keypressernext.onepeak.cn/en.html) · [Original download page](https://keypresser.onepeak.cn/keypresser-next-en.html)
+This repository contains the Community source. The **Official edition 1.2.6** installer in Releases is the separately distributed product. [Official website](https://keypressernext.onepeak.cn/en.html) · [Original download page](https://keypresser.onepeak.cn/keypresser-next-en.html)
 
 ## What you can do with Community
 
@@ -15,7 +15,7 @@ This repository contains the Community source. The **Official edition 1.2.5** in
 - Run enabled rows in sequence or independently. Set the repeat count, intervals and playback speed.
 - Save a workflow as a `.kpn` file. Copy its companion `.assets` folder with the file to keep its screenshots.
 
-## Community 1.0.0 and Official 1.2.5
+## Community 1.0.0 and Official 1.2.6
 
 | Feature | Community source in this repository | Official Windows edition |
 | --- | --- | --- |

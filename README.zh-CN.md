@@ -8,7 +8,7 @@ Windows 桌面自动化工具：统一按键 / 鼠标 / 识图行编辑器。
 
 ![程序截图](docs/images/ui-main.png)
 
-本仓库提供 Community 源码。GitHub 和 GitCode Release 中标注「官网版」的安装包对应官网版 1.2.5。下载入口见[独立官网](https://keypressernext.onepeak.cn/)或[原下载页](https://keypresser.onepeak.cn/keypresser-next.html)。
+本仓库提供 Community 源码。GitHub 和 GitCode Release 中标注「官网版」的安装包对应官网版 1.2.6。下载入口见[独立官网](https://keypressernext.onepeak.cn/)或[原下载页](https://keypresser.onepeak.cn/keypresser-next.html)。
 
 ## 功能
 
@@ -18,7 +18,7 @@ Windows 桌面自动化工具：统一按键 / 鼠标 / 识图行编辑器。
 - F8 录制 → 可编辑动作行；批量导入；撤销 / 重做
 - `.kpn` 配置 + 同名 `.assets/` 截图资源
 
-## Community 1.0.0 与官网版 1.2.5 对比
+## Community 1.0.0 与官网版 1.2.6 对比
 
 | | Community（本仓库） | [官网版本](https://keypresser.onepeak.cn/keypresser-next.html) |
 |---|---|---|
