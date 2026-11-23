@@ -20,13 +20,13 @@
     <meta property="og:url" content="https://keypressernext.onepeak.cn/en.html">
     <meta property="og:site_name" content="KeyPresserNext">
     <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/wang161113/blogImage@main/img/keypresser-next-ui-1.2.0-dsh.png">
+    <meta property="og:image" content="https://keypressernext.onepeak.cn/editor-en.png">
     <meta property="og:image:alt" content="KeyPresserNext running alongside DeepSeek Harness">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="KeyPresserNext — Windows Macro Editor with MCP Support">
     <meta name="twitter:description" content="Download KeyPresserNext for Windows. Record and edit keyboard, mouse, and image actions in one list, then replay them or control the editor with MCP. Try it for 15 days.">
-    <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wang161113/blogImage@main/img/keypresser-next-ui-1.2.0-dsh.png">
-    <meta name="twitter:image:alt" content="Preview of KeyPresserNext with DeepSeek Harness">
+    <meta name="twitter:image" content="https://keypressernext.onepeak.cn/editor-en.png">
+    <meta name="twitter:image:alt" content="KeyPresserNext action editor in English">
     <link rel="icon" href="keypresser-next-logo.png" type="image/png">
     <link rel="shortcut icon" href="keypresser-next-logo.png" type="image/png">
     <link rel="apple-touch-icon" href="keypresser-next-logo.png">
@@ -87,7 +87,7 @@
             ]
           },
           "significantLink": [
-            "https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.5/KeyPresserNext-1.2.5-setup.exe",
+            "https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.6/KeyPresserNext-1.2.6-setup.exe",
             "https://www.bilibili.com/video/BV1tk8c6tEES/",
             "https://keypresser.onepeak.cn/",
             "https://keypresser.onepeak.cn/llms.txt"
@@ -120,7 +120,7 @@
           "applicationSubCategory": "Automation",
           "operatingSystem": "Windows 10, Windows 11",
           "softwareRequirements": "Windows 10 or later",
-          "softwareVersion": "1.2.5",
+          "softwareVersion": "1.2.6",
           "inLanguage": ["zh-CN", "en"],
           "isAccessibleForFree": true,
           "slogan": "Record, edit, and run reliably",
@@ -143,8 +143,8 @@
           ],
           "description": "KeyPresserNext is the next generation of KeyPresser for Windows. With MCP and DeepSeek Harness, agents such as Cursor, Claude Code, and Codex can select windows, edit actions, and run scripts. The NextCore engine runs keyboard, mouse, and image recognition actions sequentially or independently from one editable list. Available now.",
           "url": "https://keypressernext.onepeak.cn/en.html",
-          "downloadUrl": "https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.5/KeyPresserNext-1.2.5-setup.exe",
-          "installUrl": "https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.5/KeyPresserNext-1.2.5-setup.exe",
+          "downloadUrl": "https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.6/KeyPresserNext-1.2.6-setup.exe",
+          "installUrl": "https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.6/KeyPresserNext-1.2.6-setup.exe",
           "image": "https://keypresser.onepeak.cn/keypresser-next-logo.png",
           "publisher": {
             "@id": "https://keypresser.onepeak.cn/#organization"
@@ -161,7 +161,7 @@
             "price": "0",
             "priceCurrency": "CNY",
             "availability": "https://schema.org/InStock",
-            "url": "https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.5/KeyPresserNext-1.2.5-setup.exe",
+            "url": "https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.6/KeyPresserNext-1.2.6-setup.exe",
             "description": "The installer is free. New users can try it for 15 days without signing up. Continued use requires a membership."
           }
         },
@@ -1211,6 +1211,34 @@
             .nav-links a[href^="#"] { display: none; }
         }
         /* enrich:end */
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr);
+            align-items: start;
+            gap: 24px;
+        }
+        .screenshot-grid a {
+            display: block;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        .screenshot-grid a:hover,
+        .screenshot-grid a:focus-visible { border-color: var(--accent); }
+        .screenshot-grid img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .screenshot-grid figcaption {
+            margin-top: 8px;
+            color: var(--text-secondary);
+        }
+        @media (max-width: 760px) {
+            .screenshot-grid { grid-template-columns: 1fr; }
+            .screenshot-grid figure:last-child { max-width: 460px; }
+        }
     </style>
     <link rel="stylesheet" href="language.css">
     <script src="language.js" defer></script>
@@ -1228,6 +1256,7 @@
                 <span>KeyPresserNext</span>
             </a>
             <div class="nav-links">
+                <a href="#screenshots">Screenshots</a>
                 <a href="#agent">MCP / DSH</a>
                 <a href="#workflow">Quick start</a>
                 <a href="#features">Features</a>
@@ -1247,12 +1276,34 @@
                 <a href="#agent">Set up MCP or DSH →</a>
             </p>
             <div class="hero-download-buttons">
-                <a id="download" class="download-btn primary" href="https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.5/KeyPresserNext-1.2.5-setup.exe" target="_blank" rel="noopener noreferrer">Download 1.2.5 · GitHub</a>
-                <a class="download-btn secondary" href="https://gitcode.com/FinnWang/Keypressernext/releases/download/KeyPresserNext1.2.5/KeyPresserNext-1.2.5-setup.exe" target="_blank" rel="noopener noreferrer">GitCode mirror</a>
+                <a id="download" class="download-btn primary" href="https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.6/KeyPresserNext-1.2.6-setup.exe" target="_blank" rel="noopener noreferrer">Download 1.2.6 · GitHub</a>
+                <a class="download-btn secondary" href="https://gitcode.com/FinnWang/Keypressernext/releases/download/KeyPresserNext1.2.6/KeyPresserNext-1.2.6-setup.exe" target="_blank" rel="noopener noreferrer">GitCode mirror</a>
             </div>
             <p>Choose English or Simplified Chinese in the installer. To switch later, open Settings → Interface language and reopen KeyPresserNext.</p>
         </div>
     </header>
+
+    <section class="section" id="screenshots" aria-labelledby="screenshots-title">
+        <div class="container">
+            <div class="section-head">
+                <h2 id="screenshots-title">KeyPresserNext in English</h2>
+            </div>
+            <div class="screenshot-grid">
+                <figure>
+                    <a href="editor-en.png" aria-label="View full-size action editor screenshot">
+                        <img src="editor-en.png" width="1200" height="675" loading="lazy" alt="KeyPresserNext in English showing window binding, sequential run mode, and three keyboard and mouse actions">
+                    </a>
+                    <figcaption>Action editor</figcaption>
+                </figure>
+                <figure>
+                    <a href="shortcuts-en.png" aria-label="View full-size hotkey settings screenshot">
+                        <img src="shortcuts-en.png" width="460" height="541" loading="lazy" alt="English Hotkey settings dialog showing F9 for running and F8 for recording">
+                    </a>
+                    <figcaption>Hotkey settings</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
 
     <section class="section section-agent" id="agent">
         <div class="container">
@@ -1457,7 +1508,7 @@
                 </details>
                 <details>
                     <summary>Where can I download it, and how long is the trial?</summary>
-                    <div class="faq-a">Use either download button or open <a href="https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.5/KeyPresserNext-1.2.5-setup.exe" target="_blank" rel="noopener noreferrer">the installer</a>. New installations include a trial of <strong>15 days</strong>. The classic edition is still available on the <a href="https://keypresser.onepeak.cn/index-en.html#download">downloads page</a>. Continued use requires a membership.</div>
+                    <div class="faq-a">Use either download button or open <a href="https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.6/KeyPresserNext-1.2.6-setup.exe" target="_blank" rel="noopener noreferrer">the installer</a>. New installations include a trial of <strong>15 days</strong>. The classic edition is still available on the <a href="https://keypresser.onepeak.cn/index-en.html#download">downloads page</a>. Continued use requires a membership.</div>
                 </details>
                 <details>
                     <summary>How do I connect MCP in Cursor, Codex, or Trae?</summary>
@@ -1497,7 +1548,7 @@
                 <h2>Try KeyPresserNext</h2>
                 <p>15-day trial · QQ group 901882848</p>
                 <div class="hero-actions" style="margin-bottom: 0;">
-                    <a class="btn btn-download" href="https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.5/KeyPresserNext-1.2.5-setup.exe" target="_blank" rel="noopener noreferrer">
+                    <a class="btn btn-download" href="https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.6/KeyPresserNext-1.2.6-setup.exe" target="_blank" rel="noopener noreferrer">
                         <svg class="dl-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <path d="M12 3v11m0 0l-4.5-4.5M12 14l4.5-4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M4 17.5V19a2 2 0 002 2h12a2 2 0 002-2v-1.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
@@ -1513,7 +1564,7 @@
     <footer>
         <div class="container">
             <a href="https://keypresser.onepeak.cn/index-en.html">Back to KeyPresser</a>
-            <a href="https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.5/KeyPresserNext-1.2.5-setup.exe" target="_blank" rel="noopener noreferrer">Download Next</a>
+            <a href="https://github.com/FinnWang-CN/KeyPresserNext/releases/download/KeyPresserNext1.2.6/KeyPresserNext-1.2.6-setup.exe" target="_blank" rel="noopener noreferrer">Download Next</a>
             <a href="https://keypresser.onepeak.cn/index-en.html#download">Download the classic edition</a>
             <a href="#faq">FAQ</a>
             <a href="mailto:finnsoft@qq.com">Support: finnsoft@qq.com</a>
