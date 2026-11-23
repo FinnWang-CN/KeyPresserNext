@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>KeyPresserNext · 下载更新 / Download update</title>
+    <script>
+        const language = navigator.languages?.[0] || navigator.language || "zh-CN";
+        const isChinese = /^zh(?:-|$)/i.test(language);
+        window.location.replace(isChinese ? "./#download" : "./en.html#download");
+    </script>
+</head>
+<body>
+    <main>
+        <h1>KeyPresserNext</h1>
+        <ul>
+            <li><a href="./#download" lang="zh-CN">简体中文下载</a></li>
+            <li><a href="./en.html#download" lang="en">Download in English</a></li>
+        </ul>
+    </main>
+</body>
+</html>
