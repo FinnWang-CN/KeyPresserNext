@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!switcher) return;
 
     const syncHash = () => {
-        switcher.hash = location.hash;
+        const isEnglishGallery = location.hash === '#screenshots' && switcher.hreflang === 'zh-CN';
+        switcher.hash = isEnglishGallery ? '#download' : location.hash;
     };
     syncHash();
     window.addEventListener('hashchange', syncHash);
