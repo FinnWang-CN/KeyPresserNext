@@ -1,0 +1,89 @@
+# KeyPresserNext Community
+
+[English](README.md) · **简体中文**
+
+Windows 桌面自动化工具：统一按键 / 鼠标 / 识图行编辑器。
+
+**录得下，改得动，跑得稳。**
+
+![程序截图](docs/images/ui-main.png)
+
+本仓库提供 Community 源码。GitHub 和 GitCode Release 中标注「官网版」的安装包对应官网版 1.2.5。下载入口见[独立官网](https://keypressernext.onepeak.cn/)或[原下载页](https://keypresser.onepeak.cn/keypresser-next.html)。
+
+## 功能
+
+- 统一行编辑器：按键行 / 鼠标行 / 识图
+- 顺序运行或独立并行；次数、间隔、速率
+- 选窗绑定、置顶、截图 / 键鼠仿真模式
+- F8 录制 → 可编辑动作行；批量导入；撤销 / 重做
+- `.kpn` 配置 + 同名 `.assets/` 截图资源
+
+## Community 1.0.0 与官网版 1.2.5 对比
+
+| | Community（本仓库） | [官网版本](https://keypresser.onepeak.cn/keypresser-next.html) |
+|---|---|---|
+| 录制 / 编辑 / 运行 / 识图（经典） | ✅ | ✅ |
+| 源码可自行修改、构建 | ✅ | — |
+| 识图匹配：抗缩放 / 特征 | — | ✅ |
+| 找文字定位（鼠标 / 按键） | — | ✅ |
+| 动作行拖动调序 | — | ✅ |
+| 32 位目标窗口绑定 / 输入 | — | ✅ |
+| DeepSeek Harness（DSH）联用 | — | ✅ |
+| MCP（Cursor / Codex / Trae 等 Agent） | — | ✅ |
+| 兼容 16 位色程序 | — | ✅ |
+| 界面语言 | 简体中文 | 简体中文、英文；设置中切换，下次启动生效 |
+| Windows 安装包 | 可用仓库脚本自行构建中文安装包 | GitHub、GitCode 提供中英文安装包 |
+| 自动更新（含 OCR 组件） | — | ✅ |
+| 在线账号与官方支持 | — | ✅ |
+
+新功能优先在[官网版本](https://keypresser.onepeak.cn/keypresser-next.html)更新；Community 会择机同步部分能力，但不等价于官网版功能集。
+
+### 官网版：DeepSeek Harness 联用
+
+这是官网 **1.2.0** 相对 Community 最明显的差别。装上安装包附带的插件后，可在 [DeepSeek Harness](https://www.deepseek.com/harness/zh/) 里用自然语言操作 KeyPresserNext 界面上能点的功能，不必自己点选。
+
+Agent 能代劳的事包括：
+
+- **绑窗口**：按标题或 hwnd，不必在屏幕上点选
+- **改动作行**：增删改、撤销重做、批量导入
+- **跑起来**：开始 / 停止、录制、改次数、间隔、速率
+- **先测通**：测试截图、测试鼠标、测试键盘（会向已绑窗口真正发键鼠）
+- **管配置**：打开 / 新建 / 保存 `.kpn`，改仿真模式和运行模式
+
+改完后主窗口马上刷新。用法、怎么选模式、常见问题都可以直接问 DSH（会参考本软件的用户帮助）。
+
+程序内菜单 **帮助 → 安装 DSH 插件并重启** 即可装好。Community 不含控制通道与插件，无法与 DSH 联用。
+
+### 官网版：MCP（Cursor / Codex / Trae 等）
+
+官网 **1.2.1** 起，同一套控制能力也可通过 **MCP** 交给 Cursor、Claude Code、Codex、Trae、CodeBuddy 等 Agent。工具名均为 `keypressernext`，能做的事与 DSH 对齐：绑窗、改动作行、开始 / 停止、录制、测试截图与键鼠、打开 / 保存 `.kpn` 等。
+
+接入方式：
+
+1. 本机已安装 Node，且 Agent 与本程序使用**同一 Windows 用户**
+2. 菜单 **帮助 → 复制 MCP 配置…**，粘贴给 Agent 自动写入配置，或按用户帮助手动合并 `mcp.json`
+3. 刷新 MCP 后即可调用 `keypressernext`
+
+Community 不含本机控制通道与 MCP 服务，无法通过 MCP 联用。
+
+## 构建
+
+- Windows x64
+- Qt 5.15 + MSVC **64-bit**
+- 首次需构建 QWindowKit：`scripts\build_qwindowkit.bat`（若已有 `third_party/qwindowkit-install` 可跳过）
+- 打开 `KeyPresserNext.pro`，qmake 后编译（产物：`KeyPresserNextCommunity.exe`）
+- 运行目录需有引擎 DLL（构建后自动从 `engine/runtime/bin` 拷贝）：
+  - `NextCore.dll`
+  - `NextBase.dll`
+  - `tools.dll`
+
+程序清单为 **requireAdministrator**（启动会请求管理员权限），以便全局热键 / 录制 / 注入可作用于以管理员运行的目标窗口。
+
+## 许可证
+
+MIT — 见 [LICENSE](LICENSE)。第三方组件见 [NOTICE](NOTICE)。
+
+## 链接
+
+- [KeyPresserNext 独立官网](https://keypressernext.onepeak.cn/)
+- [原中文下载页](https://keypresser.onepeak.cn/keypresser-next.html)
